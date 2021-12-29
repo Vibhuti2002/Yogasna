@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1079983299494",
+    "project_id": "yogasna-3f7a3",
+    "storage_bucket": "yogasna-3f7a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079983299494:android:7ba63f3b19a0f1cea54d67",
+        "android_client_info": {
+          "package_name": "com.yogaapp.yogasna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079983299494-eks5pj21nn2im9k4t21iso16l78aie0q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN6R5b6FGTjPQqsuCD0HEbbbtZuQIiakI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079983299494-eks5pj21nn2im9k4t21iso16l78aie0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

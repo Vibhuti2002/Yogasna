@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/yoga_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.yogaapp.yogasna.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_suryaNamaskar_Fragment"
+            app:destination="@id/suryaNamaskar_Fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_relax_Fragment"
+            app:destination="@id/relax_Fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_thoughts_Fragment"
+            app:destination="@id/thoughts_Fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bodyFitness"
+            app:destination="@id/bodyFitness" />
+    </fragment>
+    <fragment
+        android:id="@+id/thoughts_Fragment"
+        android:name="com.yogaapp.yogasna.Thoughts_Fragment"
+        android:label="fragment_thoughts_"
+        tools:layout="@layout/fragment_thoughts_" >
+        <action
+            android:id="@+id/action_thoughts_Fragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/relax_Fragment"
+        android:name="com.yogaapp.yogasna.Relax_Fragment"
+        android:label="fragment_relax_"
+        tools:layout="@layout/fragment_relax_" >
+        <action
+            android:id="@+id/action_relax_Fragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/suryaNamaskar_Fragment"
+        android:name="com.yogaapp.yogasna.suryanamskar.SuryaNamaskar_Fragment"
+        android:label="fragment_surya_namaskar_"
+        tools:layout="@layout/fragment_surya_namaskar_" >
+        <action
+            android:id="@+id/action_suryaNamaskar_Fragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_suryaNamaskar_Fragment_to_steps_Suryanamskar"
+            app:destination="@id/steps_Suryanamskar" />
+        <action
+            android:id="@+id/action_suryaNamaskar_Fragment_to_benefits"
+            app:destination="@id/benefits" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/steps_Suryanamskar"
+        android:name="com.yogaapp.yogasna.suryanamskar.Steps_Suryanamskar"
+        android:label="fragment_steps__suryanamskar"
+        tools:layout="@layout/fragment_steps__suryanamskar" >
+        <action
+            android:id="@+id/action_steps_Suryanamskar_to_surya_Step_Description_Fragment"
+            app:destination="@id/surya_Step_Description_Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bodyFitness"
+        android:name="com.yogaapp.yogasna.BodyFitness"
+        android:label="fragment_body_fitness"
+        tools:layout="@layout/fragment_body_fitness" />
+    <fragment
+        android:id="@+id/benefits"
+        android:name="com.yogaapp.yogasna.suryanamskar.Benefits"
+        android:label="fragment_benefits"
+        tools:layout="@layout/fragment_benefits" />
+    <fragment
+        android:id="@+id/surya_Step_Description_Fragment"
+        android:name="com.yogaapp.yogasna.suryanamskar.Surya_Step_Description_Fragment"
+        android:label="fragment_surya__step__description_"
+        tools:layout="@layout/fragment_surya__step__description_" >
+        <argument
+            android:name="pos"
+            app:argType="integer" />
+    </fragment>
+
+
+</navigation>

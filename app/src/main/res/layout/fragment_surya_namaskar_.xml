@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0.25dp"
+    android:background="@color/white"
+    tools:context=".suryanamskar.SuryaNamaskar_Fragment">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="#2B2B2B"
+        android:fontFamily="@font/roboto_slab"
+        android:text="Surya Namaskar"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/steps"
+        android:layout_width="388dp"
+        android:layout_height="78dp"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/roboto_slab"
+        android:padding="10dp"
+
+        android:text="@string/step_by_step_poses"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/benefits"
+        app:layout_constraintVertical_bias="0.301" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/benefits"
+        android:layout_width="388dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/roboto_slab"
+
+        android:padding="10dp"
+        android:text="@string/benefits"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <TextView
+
+        android:id="@+id/description"
+        android:layout_width="389dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="36dp"
+
+        android:background="@drawable/cardview"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/sun_salutation_is_a_practice_in_yoga_as_exercise_incorporating_a_flow_sequence_of_some_twelve_gracefully_linked_asanas_the_basic_sequence_involves_moving_from_a_standing_position_into_downward_and_upward_dog_poses_and_then_back_to_the_standing_position_but_many_variations_are_possible_the_set_of_12_asanas_is_dedicated_to_the_hindu_solar_deity_surya"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
