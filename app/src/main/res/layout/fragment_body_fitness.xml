@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BodyFitness">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.BodyFitness_Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bNeckWorkout"
+        android:layout_width="165dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bodyfitnessbutton"
+        android:backgroundTint="#F8DEFF"
+        android:text="Neck Workout"
+        app:layout_constraintEnd_toStartOf="@id/bShouldersWorkout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bShouldersWorkout"
+        android:layout_width="165dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bodyfitnessbutton"
+        android:backgroundTint="#FDFF9B"
+        android:text="Shoulders Workout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bNeckWorkout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bArmWorkout"
+        android:layout_width="165dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bodyfitnessbutton"
+        android:backgroundTint="#FFDAC1"
+        android:text="Arms Workout"
+        app:layout_constraintEnd_toStartOf="@id/bChestWorkout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bNeckWorkout" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bChestWorkout"
+        android:layout_width="165dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bodyfitnessbutton"
+        android:backgroundTint="#CDFDBC"
+        android:text="Chest Workout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bArmWorkout"
+        app:layout_constraintTop_toBottomOf="@id/bShouldersWorkout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recyclersurya"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,13 +10,12 @@
 
     <View
         android:id="@+id/bgview"
-        android:layout_width="387dp"
+        android:layout_width="match_parent"
         android:layout_height="101dp"
-        android:background="@drawable/cardview"
+        android:background="@drawable/gradient2"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,7 +27,7 @@
         android:fontFamily="@font/roboto_slab"
         android:text="@string/step_01"
         android:textColor="@color/white"
-        android:textSize="27dp"
+        android:textSize="27sp"
         app:layout_constraintBottom_toTopOf="@id/duration"
 
         app:layout_constraintEnd_toEndOf="@id/bgview"
@@ -63,4 +63,14 @@
         app:layout_constraintStart_toStartOf="@id/bgview"
         app:layout_constraintTop_toBottomOf="@+id/step_head"
         app:layout_constraintVertical_bias="0.523" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/bgview"
+        app:layout_constraintTop_toTopOf="@id/bgview"
+        app:layout_constraintBottom_toBottomOf="@id/bgview"
+
+        android:src="@drawable/ic_baseline_navigate_next_24"
+        tools:layout_editor_absoluteX="304dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

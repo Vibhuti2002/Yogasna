@@ -1,29 +1,22 @@
-package com.yogaapp.yogasna.suryanamskar
+package com.yogaapp.yogasna.adapter
 
-import android.annotation.SuppressLint
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.yogaapp.yogasna.R
+import com.yogaapp.yogasna.dataClass.steplistdata
 
-class Surya_Adapter(private val suryastepslist : ArrayList<steplistdata>) : RecyclerView.Adapter<Surya_Adapter.MyViewHolder>() {
-    private lateinit var mListener: onItemClickListener
+class Surya_Adapter(private var mListener : onItemClickListener , private val suryastepslist : ArrayList<steplistdata> ) : RecyclerView.Adapter<Surya_Adapter.MyViewHolder>() {
+
     interface onItemClickListener{
         fun onItemClick(position: Int)
-        abstract fun onViewCreated(view: View, savedInstanceState: Bundle?)
     }
 
-    fun setOnItemClickListener(listener: onItemClickListener){
-        mListener = listener
-    }
-
-//    @SuppressLint("ResourceType")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.surya_step_list_iem, parent, false)
-        return MyViewHolder(itemView, mListener)
+        return MyViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
@@ -35,13 +28,17 @@ class Surya_Adapter(private val suryastepslist : ArrayList<steplistdata>) : Recy
     override fun getItemCount(): Int {
         return suryastepslist.size
     }
-    class MyViewHolder(itemView: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemView){
-
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener{
         val stepheading : TextView = itemView.findViewById(R.id.step_head)
         val durationheading : TextView = itemView.findViewById(R.id.duration)
         init {
-            itemView.setOnClickListener{
-                listener.onItemClick(adapterPosition)
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(p0: View?) {
+            val position = bindingAdapterPosition
+            if(position!= RecyclerView.NO_POSITION){
+                mListener.onItemClick(position)
             }
         }
     }

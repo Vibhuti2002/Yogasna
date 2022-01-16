@@ -16,25 +16,20 @@
         <action
             android:id="@+id/action_homeFragment_to_relax_Fragment"
             app:destination="@id/relax_Fragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_thoughts_Fragment"
-            app:destination="@id/thoughts_Fragment" />
+
         <action
             android:id="@+id/action_homeFragment_to_bodyFitness"
             app:destination="@id/bodyFitness" />
-    </fragment>
-    <fragment
-        android:id="@+id/thoughts_Fragment"
-        android:name="com.yogaapp.yogasna.Thoughts_Fragment"
-        android:label="fragment_thoughts_"
-        tools:layout="@layout/fragment_thoughts_" >
         <action
-            android:id="@+id/action_thoughts_Fragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_homeFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+
+
     </fragment>
+
     <fragment
         android:id="@+id/relax_Fragment"
-        android:name="com.yogaapp.yogasna.Relax_Fragment"
+        android:name="com.yogaapp.yogasna.fragments.Relax_Fragment"
         android:label="fragment_relax_"
         tools:layout="@layout/fragment_relax_" >
         <action
@@ -69,9 +64,13 @@
 
     <fragment
         android:id="@+id/bodyFitness"
-        android:name="com.yogaapp.yogasna.BodyFitness"
+        android:name="com.yogaapp.yogasna.fragments.BodyFitness_Fragment"
         android:label="fragment_body_fitness"
-        tools:layout="@layout/fragment_body_fitness" />
+        tools:layout="@layout/fragment_body_fitness" >
+        <action
+            android:id="@+id/action_bodyFitness_to_bodyFitnessListFragment"
+            app:destination="@id/bodyFitnessListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/benefits"
         android:name="com.yogaapp.yogasna.suryanamskar.Benefits"
@@ -82,6 +81,56 @@
         android:name="com.yogaapp.yogasna.suryanamskar.Surya_Step_Description_Fragment"
         android:label="fragment_surya__step__description_"
         tools:layout="@layout/fragment_surya__step__description_" >
+        <argument
+            android:name="pos"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_surya_Step_Description_Fragment_self"
+            app:destination="@id/surya_Step_Description_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.yogaapp.yogasna.fragments.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" >
+        <argument
+            android:name="pos"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_categoryDescription"
+            app:destination="@id/categoryDescription" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryDescription"
+        android:name="com.yogaapp.yogasna.fragments.CategoryDescription"
+        android:label="fragment_category_description"
+        tools:layout="@layout/fragment_category_description" >
+        <argument
+            android:name="pos"
+            app:argType="integer" />
+        <argument
+            android:name="type"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/bodyFitnessListFragment"
+        android:name="com.yogaapp.yogasna.fragments.BodyFitnessListFragment"
+        android:label="fragment_body_fitness_list"
+        tools:layout="@layout/fragment_body_fitness_list" >
+        <argument
+            android:name="pos"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_bodyFitnessListFragment_to_bodyFitnessDescription"
+            app:destination="@id/bodyFitnessDescription" />
+        </fragment>
+    <fragment
+        android:id="@+id/bodyFitnessDescription"
+        android:name="com.yogaapp.yogasna.fragments.BodyFitnessDescription"
+        android:label="fragment_body_fitness_description"
+        tools:layout="@layout/fragment_body_fitness_description" >
+        <argument android:name="headPos"
+            app:argType="integer" />
         <argument
             android:name="pos"
             app:argType="integer" />

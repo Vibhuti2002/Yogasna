@@ -6,18 +6,18 @@
     android:layout_height="match_parent"
     android:layout_margin="0.25dp"
     android:background="@color/white"
-    tools:context=".suryanamskar.SuryaNamaskar_Fragment">
+     tools:context=".suryanamskar.SuryaNamaskar_Fragment">
 
 
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="53dp"
-        android:background="#2B2B2B"
+        android:background="@drawable/heading"
         android:fontFamily="@font/roboto_slab"
         android:text="Surya Namaskar"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="30sp"
          app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -35,7 +35,7 @@
         android:padding="10dp"
 
         android:text="@string/step_by_step_poses"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,7 +56,7 @@
 
         android:padding="10dp"
         android:text="@string/benefits"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20sp"
 
         android:textStyle="bold"
@@ -73,11 +73,11 @@
 
         android:layout_marginTop="36dp"
 
-        android:background="@drawable/cardview"
+        android:background="@drawable/gradient5"
         android:fontFamily="@font/roboto_slab"
         android:text="@string/sun_salutation_is_a_practice_in_yoga_as_exercise_incorporating_a_flow_sequence_of_some_twelve_gracefully_linked_asanas_the_basic_sequence_involves_moving_from_a_standing_position_into_downward_and_upward_dog_poses_and_then_back_to_the_standing_position_but_many_variations_are_possible_the_set_of_12_asanas_is_dedicated_to_the_hindu_solar_deity_surya"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

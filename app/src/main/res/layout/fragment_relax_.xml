@@ -1,27 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Relax_Fragment"
-    android:backgroundTint="#CBCBCB"
-    android:background="#CBCBCB">
+    android:layout_margin="1dp"
+    android:background="@color/white"
+    tools:context=".fragments.Relax_Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:background="#B6FFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/button1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="10dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B6FFFF"
+            android:fontFamily="sans-serif-medium"
+            android:padding="10dp"
+            android:text="@string/reklax_description"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/button1"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/buttons"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button2"/>
+
+    <TextView
+        android:id="@+id/tvrelax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/om_chanting"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/button1"
+        app:layout_constraintEnd_toStartOf="@id/playbutton"
+        app:layout_constraintStart_toStartOf="@id/button1"
+        app:layout_constraintTop_toTopOf="@id/button1"
+        app:layout_constraintVertical_bias="0.59" />
+
+    <ImageView
+        android:id="@+id/playbutton"
+        android:padding="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/playaudio"
+        app:layout_constraintBottom_toBottomOf="@id/button1"
+        app:layout_constraintEnd_toEndOf="@id/button1"
+        app:layout_constraintTop_toTopOf="@id/button1" />
+
+
+
+    <View
+        android:id="@+id/button2"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/buttons"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvrelax2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/song_of_sadhana"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:textSize="18dp"
+        app:layout_constraintTop_toTopOf="@id/button2"
+        app:layout_constraintBottom_toBottomOf="@id/button2"
+        app:layout_constraintEnd_toStartOf="@id/playbutton2"
+        app:layout_constraintStart_toStartOf="@id/button2"/>
+
+    <ImageView
+        android:id="@+id/playbutton2"
+        android:padding="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/playaudio"
+        app:layout_constraintBottom_toBottomOf="@id/button2"
+        app:layout_constraintEnd_toEndOf="@id/button2"
+        app:layout_constraintTop_toTopOf="@id/button2" />
+
+
+    <View
+        android:id="@+id/button3"
+        android:layout_margin="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/buttons"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button4"/>
+
+    <TextView
+        android:id="@+id/tvrelax3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calm Music"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:textSize="18dp"
+        app:layout_constraintTop_toTopOf="@id/button3"
+        app:layout_constraintBottom_toBottomOf="@id/button3"
+        app:layout_constraintEnd_toStartOf="@id/playbutton3"
+        app:layout_constraintStart_toStartOf="@id/button3"/>
+
+    <ImageView
+        android:id="@+id/playbutton3"
+        android:padding="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/playaudio"
+        app:layout_constraintBottom_toBottomOf="@id/button3"
+        app:layout_constraintEnd_toEndOf="@id/button3"
+        app:layout_constraintTop_toTopOf="@id/button3" />
+    <View
+        android:id="@+id/button4"
+        android:layout_margin="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/buttons"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bpause"/>
+
+    <TextView
+        android:id="@+id/tvrelax4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/piano_moment"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:textSize="18dp"
+        app:layout_constraintTop_toTopOf="@id/button4"
+        app:layout_constraintBottom_toBottomOf="@id/button4"
+        app:layout_constraintEnd_toStartOf="@id/playbutton4"
+        app:layout_constraintStart_toStartOf="@id/button4"/>
+
+    <ImageView
+        android:id="@+id/playbutton4"
+        android:padding="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/playaudio"
+        app:layout_constraintBottom_toBottomOf="@id/button4"
+        app:layout_constraintEnd_toEndOf="@id/button4"
+        app:layout_constraintTop_toTopOf="@id/button4" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="414dp"
         android:layout_height="47dp"
-        android:background="#2B2B2B"
-        android:fontFamily="@font/roboto_slab"
+        android:background="@drawable/heading"
+        android:fontFamily="@font/acme"
         android:text="Relax"
+        android:layout_marginBottom="2dp"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/rectangle_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <View
+        android:id="@+id/bpause"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="3dp"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/pauseaudio"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,11 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.yogaapp.yogasna">
-    <permission android:name="android.permission.INTERNET"/>
-    <permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-        <permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-            android:maxSdkVersion="30"/>
-    <permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:icon="@mipmap/ic_launcher"
@@ -15,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yogasna"
         android:usesCleartextTraffic="true"
-        android:networkSecurityConfig="@id/beginnerChallenges"
         android:fullBackupOnly="true"
         tools:targetApi="31"
         android:allowBackup="true">
@@ -24,13 +21,22 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="console.firebase.google.com"
+                    android:pathPattern="/project/yogasna-3f7a3/overview" />
             </intent-filter>
         </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
 </manifest>

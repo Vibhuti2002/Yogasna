@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="5dp"
         tools:context=".suryanamskar.Surya_Step_Description_Fragment">
 
         <TextView
@@ -23,37 +24,81 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="27sp"
-            app:layout_constraintBottom_toTopOf="@id/suryastepimage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
 
             android:id="@+id/suryastepimage"
-            android:layout_width="400dp"
-            android:layout_height="393dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
             android:layout_below="@+id/stepheading"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginVertical="30dp"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/stepheading" />
+            app:layout_constraintTop_toBottomOf="@id/stepheading"
+             />
 
         <ProgressBar
         android:id="@+id/progressBarT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/suryastepimage"
+        app:layout_constraintEnd_toEndOf="@id/suryastepimage"
+        app:layout_constraintStart_toStartOf="@id/suryastepimage"
+        app:layout_constraintTop_toTopOf="@id/suryastepimage"
         />
-    </androidx.constraintlayout.widget.ConstraintLayout>>
+        <TextView
+            android:id="@id/stepdescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:fontFamily="@font/roboto_slab"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/suryastepimage"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/previousbtn"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="previous"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:background="@drawable/buttons"
+            android:fontFamily="@font/roboto_slab"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/Nextbtn"
+            app:layout_constraintTop_toBottomOf="@id/stepdescription"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:flow_verticalAlign="bottom"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Nextbtn"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto_slab"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:background="@drawable/buttons"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="379dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stepdescription"
+            app:layout_constraintStart_toEndOf="@id/previousbtn"
+            app:flow_verticalAlign="bottom"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </ScrollView>

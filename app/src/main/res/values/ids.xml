@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="stepdescription" type="id" />
+    <item name="relax" type="id" />
+    <item name="suryanamskarcard" type="id" />
+    <item name="rectangle_3" type="id" />
+    <item name="rectangle_2" type="id" />
+</resources>

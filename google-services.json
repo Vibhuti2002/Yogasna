@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1079983299494-nssi01uicja17ecn0unvee4rn8esfn51.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yogaapp.yogasna",
+            "certificate_hash": "97cac77738954b00bc919ddb342facb9465edc20"
+          }
+        },
+        {
           "client_id": "1079983299494-eks5pj21nn2im9k4t21iso16l78aie0q.apps.googleusercontent.com",
           "client_type": 3
         }

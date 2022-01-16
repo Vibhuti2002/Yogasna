@@ -9,16 +9,20 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.yogaapp.yogasna.R
+import com.yogaapp.yogasna.adapter.Surya_Adapter
+import com.yogaapp.yogasna.dataClass.steplistdata
 import com.yogaapp.yogasna.databinding.FragmentStepsSuryanamskarBinding
 
-class Steps_Suryanamskar : Fragment() {
+class Steps_Suryanamskar : Fragment(), Surya_Adapter.onItemClickListener {
+
     private lateinit var newrecyclerview: RecyclerView
     private lateinit var newArraylist: ArrayList<steplistdata>
-    lateinit var suryastepArray: Array<String>
-    lateinit var suryadurationArray: Array<String>
+    private lateinit var suryastepArray: Array<String>
+    private lateinit var suryadurationArray: Array<String>
     private lateinit var binding: FragmentStepsSuryanamskarBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
@@ -62,7 +66,6 @@ class Steps_Suryanamskar : Fragment() {
         newrecyclerview.setHasFixedSize(true)
         newArraylist = arrayListOf<steplistdata>()
         getUserData()
-
         return view
     }
 
@@ -71,49 +74,13 @@ class Steps_Suryanamskar : Fragment() {
             val steplistdata = steplistdata(suryastepArray[i], suryadurationArray[i])
             newArraylist.add(steplistdata)
         }
-
-
-        val adapter = Surya_Adapter(newArraylist)
+        val adapter = Surya_Adapter(this,newArraylist)
         newrecyclerview.adapter = adapter
-        adapter.setOnItemClickListener(
-            object : Surya_Adapter.onItemClickListener {
-
-                override fun onItemClick(position: Int) {
-                    // findNavController().navigate(R.id.action_steps_Suryanamskar_to_surya_Step_Description_Fragment)
-                    val pos = position
-                    val action =
-                        Steps_SuryanamskarDirections.actionStepsSuryanamskarToSuryaStepDescriptionFragment(
-                            pos
-                        )
-                    findNavController().navigate(action)
-                }
-
-                override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-                    binding.suryaStepsRecycler.setOnClickListener {
-
-                    }
-
-                }
-            })
-
     }
 
-
-
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//        binding.recycler.setOnClickListener{
-//            val storageRef = FirebaseStorage.getInstance().reference.child("images/pexels-elina-fairytale-3822114(1)-min.jpg")
-//
-//            val localfile = File.createTempFile("Tempimage", "jpg")
-//            storageRef.getFile(localfile).addOnSuccessListener {
-//                val bitmap = BitmapFactory.decodeFile(localfile.absolutePath)
-//                binding.image.setImageBitmap(bitmap)
-//            }
-//            }.addOnFailureListener{
-//                Toast.makeText(this,"Failed to load image",Toast.LENGTH_SHORT).show()
-//            }
-//    }
-
-
+    override fun onItemClick(position: Int) {
+        val pos = position
+        val action = Steps_SuryanamskarDirections.actionStepsSuryanamskarToSuryaStepDescriptionFragment(pos)
+        findNavController().navigate(action)
+    }
 }
