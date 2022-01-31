@@ -19,10 +19,9 @@ import com.yogaapp.yogasna.databinding.FragmentBodyFitnessListBinding
 
 class BodyFitnessListFragment : Fragment() {
     private val args by navArgs<BodyFitnessListFragmentArgs>()
-    private val bodyFitnessButton = arrayOf("Neck Workout description", "Shoulders Workout description", "Arm Workout description", "Chest Workout description")
-    private val neckWorkoutArray = arrayOf("Neck Workout ex1", "Neck Workout ex2", "Neck Workout ex3", "Neck Workout ex4")
-    private val shoulderWorkoutArray = arrayOf("Shoulders Workout ex1", "Shoulders Workout ex2", "Shoulders Workout ex3", "Shoulders Workout ex4")
-    private val armWorkoutArray = arrayOf("Arms Workout ex1", "Arms Workout ex2", "Arms Workout ex3", "Arms Workout ex4")
+    private val absWorkoutArray = arrayOf("Plank", "Mountain Climber", "Reverse Crunch", "Russian twist","Dead Bug", "Leg Raise", "Bird Dog")
+    private val shoulderWorkoutArray = arrayOf("Push-ups", "Decline push-ups", "Car driver", "Lateral Raise", "inchworm", "Side plank", "Plank to Down Dog")
+    private val armWorkoutArray = arrayOf("Push-ups","Lateral Raise","Triceps", "Superman with arm extension", "Biceps Curl", "Hammer Curl","Diamond Pushups")
     private val chestWorkoutArray = arrayOf("Chest Workout ex1", "Chest Workout ex2", "Chest Workout ex3", "Chest Workout ex4")
 
     private lateinit var newrecyclerview: RecyclerView
@@ -53,8 +52,8 @@ class BodyFitnessListFragment : Fragment() {
     private fun getUserData(){
         if (args.pos==0){
             headPos =0
-            for (i in neckWorkoutArray.indices){
-                val fitnessData = BodyFitnessListDataClass(neckWorkoutArray[i])
+            for (i in absWorkoutArray.indices){
+                val fitnessData = BodyFitnessListDataClass(absWorkoutArray[i])
                 newArraylist.add(fitnessData)
             }
         }

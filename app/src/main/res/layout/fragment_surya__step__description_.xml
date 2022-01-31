@@ -22,7 +22,7 @@
             android:fontFamily="@font/roboto_slab"
             android:text="@string/step"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="27sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,14 +32,14 @@
         <com.google.android.material.imageview.ShapeableImageView
 
             android:id="@+id/suryastepimage"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/stepheading"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginVertical="30dp"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/stepheading"
@@ -54,16 +54,20 @@
         app:layout_constraintStart_toStartOf="@id/suryastepimage"
         app:layout_constraintTop_toTopOf="@id/suryastepimage"
         />
+
         <TextView
             android:id="@id/stepdescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="24dp"
             android:fontFamily="@font/roboto_slab"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/previousbtn"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/suryastepimage"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/suryastepimage" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/previousbtn"
             android:layout_width="120dp"
@@ -77,7 +81,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/Nextbtn"
             app:layout_constraintTop_toBottomOf="@id/stepdescription"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/stopButton"
             app:flow_verticalAlign="bottom"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -93,10 +97,20 @@
             android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="379dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/stopButton"
             app:layout_constraintTop_toBottomOf="@id/stepdescription"
             app:layout_constraintStart_toEndOf="@id/previousbtn"
             app:flow_verticalAlign="bottom"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/stopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/stop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Nextbtn"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -21,7 +21,7 @@ class BodyFitness_Fragment() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentBodyFitnessBinding.inflate(layoutInflater)
-        binding.bNeckWorkout.setOnClickListener {
+        binding.bAbsWorkout.setOnClickListener {
             onItemClick(0)
         }
         binding.bShouldersWorkout.setOnClickListener {

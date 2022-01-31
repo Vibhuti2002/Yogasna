@@ -21,7 +21,6 @@
     <string name="step_1">step 1</string>
     <string name="step">step</string>
     <string name="click_here_to_view_image">click here to view image</string>
-    <string name="body_fitness">Body Fitness</string>
     <string name="thoughts">Thoughts</string>
     <string name="weight_loss">Weight loss</string>
     <string name="om_namah_shivay_108_times_chanting">Om namah shivay 108 times chanting</string>
@@ -35,4 +34,11 @@
     <string name="benefits_of_surya_namaskar">Benefits of Surya Namaskar:</string>
     <string name="categories">Categories</string>
     <string name="exercise_1">Exercise 1</string>
+    <string name="speak">Speak</string>
+    <string name="body_fitness">Body Fitness</string>
+    <string name="neck_workout">Neck Workout</string>
+    <string name="abs_workout">Abs Workout</string>
+    <string name="shoulders_workout">Shoulders Workout</string>
+    <string name="arms_workout">Arms Workout</string>
+    <string name="chest_workout">Chest Workout</string>
 </resources>

@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:text="@string/benefits_of_surya_namaskar"
         android:fontFamily="sans-serif-condensed"
-        android:textSize="35dp"
+        android:textSize="25sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -27,9 +27,10 @@
         android:layout_height="wrap_content"
         android:background="#F8DEFF"
         android:backgroundTint="#F8DEFF"
+        android:layout_margin="5dp"
         android:padding="10dp"
+        android:elevation="10dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvbenefithead"
@@ -43,7 +44,7 @@
             android:text=" 1. Helps with weight loss\n 2.Ensures a better functioning digestive system\n 3.Strengthens muscles and joints\n
 4. Ensures regular menstrual cycle\n 5. Useful in treatment of frozen shoulders\n 6. Reduces blood sugar levels\n 7. Spinal cord and abdominal muscles are stretched\n 8. Improves digestion and reduces constipation\n 9. Promotes balance between both sides of the body\n 10. Eliminates stomach ailments"
             android:textColor="@color/black"
-            android:textSize="27dp" />
+            android:textSize="20sp" />
 
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

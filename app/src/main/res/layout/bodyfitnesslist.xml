@@ -3,22 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="2dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/bodyFitnessCard"
-        android:layout_width="407dp"
-        android:layout_height="74dp"
-        android:background="@drawable/buttons"
+    <View
+        android:id="@+id/bgview"
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        android:background="@drawable/gradient2"
+        android:padding="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
         <TextView
             android:id="@+id/bodyListHead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="abc"
-            android:textColor="@color/black"
-            android:textSize="24dp" />
-    </androidx.cardview.widget.CardView>
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="@id/bgview"
+            app:layout_constraintStart_toStartOf="@id/bgview"
+            app:layout_constraintEnd_toEndOf="@id/bgview"
+            app:layout_constraintBottom_toBottomOf="@id/bgview"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

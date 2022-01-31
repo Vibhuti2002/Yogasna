@@ -137,7 +137,6 @@
         android:backgroundTint="#F8DEFF"
         android:padding="8dp"
         android:layout_marginHorizontal="10dp"
-        android:paddingTop="10dp"
         app:cardCornerRadius="10dp"
         app:flow_verticalAlign="center"
         app:layout_constraintBottom_toTopOf="@id/relax"
@@ -149,31 +148,26 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/weightlossConstraint"
-            android:layout_width="match_parent"
-            android:layout_height="131dp"
-            android:background="#FFD3E6">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <ImageView
-
-                android:layout_width="371dp"
-                android:layout_height="125dp"
-                android:layout_marginHorizontal="10dp"
-                android:backgroundTint="#F8DEFF"
-                android:src="@drawable/bodyfitness"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bodyfitness"
                 app:layout_constraintBottom_toBottomOf="@id/weightlossConstraint"
                 app:layout_constraintEnd_toEndOf="@id/weightlossConstraint"
                 app:layout_constraintTop_toTopOf="@id/weightlossConstraint"
-                app:layout_constraintStart_toStartOf="@id/weightlossConstraint"
-                app:layout_constraintVertical_bias="0.0" />
+                />
 
             <TextView
-                android:id="@+id/weightloss"
+                android:id="@+id/tvbodyfitness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="36dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Weight Loss"
+                android:text="@string/body_fitness"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="@id/weightlossConstraint"
@@ -186,7 +180,7 @@
                 android:text="@string/_20_minutes"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@id/weightlossConstraint"
-                app:layout_constraintTop_toBottomOf="@id/weightloss" />
+                app:layout_constraintTop_toBottomOf="@id/tvbodyfitness" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

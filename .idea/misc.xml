@@ -17,10 +17,14 @@
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/drawable/gradient5.xml" value="0.178125" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/drawable/heading.xml" value="0.178125" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.178125" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/drawable/ic_baseline_volume_up_24.xml" value="0.1625" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1078125" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/drawable/line.xml" value="0.178125" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/drawable/pauseaudio.xml" value="0.178125" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/drawable/playaudio.xml" value="0.178125" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/drawable/speak.xml" value="0.1625" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/drawable/splashimage.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/drawable/stop.xml" value="0.1625" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/font/font.xml" value="0.1765625" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/font/roboto_slab.xml" value="0.11481481481481481" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -36,13 +40,14 @@
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_body_fitness_description.xml" value="0.1015625" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_body_fitness_list.xml" value="0.10364583333333334" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_categories.xml" value="0.16197916666666667" />
-        <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_category_description.xml" value="0.13697916666666668" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_category_description.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_daily_warm_up.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_intermediate.xml" value="0.16197916666666667" />
-        <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_relax_.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_relax_.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_steps__suryanamskar.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_stretching.xml" value="0.13229166666666667" />
-        <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_surya__step__description_.xml" value="0.1" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_surya__step__description_.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_surya_namaskar_.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/fragment_thoughts_.xml" value="0.16197916666666667" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/Yogasna/app/src/main/res/layout/horizontal_list_items.xml" value="0.13072916666666667" />

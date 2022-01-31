@@ -20,9 +20,9 @@ class CategoriesFragment : Fragment() {
     lateinit var binding: FragmentCategoriesBinding
     private lateinit var newrecyclerview: RecyclerView
     private lateinit var newArraylist: ArrayList<CategoriesDataClass>
-    private var warmUpHeadArray = arrayOf("Exercise 1", "Exercise 2", "Exercise 3", "Exercise 4", "Exercise 5")
-    private var stretchArray = arrayOf("Exercise 1", "Exercise 2", "Exercise 3", "Exercise 4", "Exercise 5")
-    private var strengthArray = arrayOf("Exercise  1", "Exercise 2", "Exercise 3", "Exercise 4", "Exercise 5")
+    private var warmUpHeadArray = arrayOf("Head to Toe Warm-up Exercises")
+    private var stretchArray = arrayOf("Bridge Pose","Cat pose","Child's Pose","Downward Dog","Pigeon pose","Triangle pose","Warrior II")
+    private var strengthArray = arrayOf("Three-Legged Dog Pose","Warrior III","Revolved Half Moon Pose","Boat Pose","Bridge Pose","Mountain Pose","Revolved Side Angle Pose")
     var type = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,6 +76,4 @@ class CategoriesFragment : Fragment() {
         val action = CategoriesFragmentDirections.actionCategoriesFragmentToCategoryDescription(pos, type)
         findNavController().navigate(action)
     }
-
-
 }
