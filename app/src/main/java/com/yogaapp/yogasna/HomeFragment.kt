@@ -75,13 +75,14 @@ class HomeFragment : Fragment() {
     }
     fun onItemClick(position: Int) {
         val pos = position
-        Log.d("VIBHUTI", "Click$pos")
-        Toast.makeText(activity, "Click $pos", Toast.LENGTH_SHORT).show()
-        val action = HomeFragmentDirections.actionHomeFragmentToCategoriesFragment(pos)
-        findNavController().navigate(action)
-
+        if (position == 0){
+            val action = HomeFragmentDirections.actionHomeFragmentToWarmUpFragment()
+            findNavController().navigate(action)
+        }else {
+            val action = HomeFragmentDirections.actionHomeFragmentToCategoriesFragment(pos)
+            findNavController().navigate(action)
+        }
     }
-
 }
 
 

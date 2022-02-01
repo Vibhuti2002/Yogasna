@@ -4,30 +4,46 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
+    android:backgroundTint="@color/white"
     android:layout_margin="2dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <View
         android:id="@+id/bgview"
         android:layout_width="match_parent"
-        android:layout_height="101dp"
+        android:layout_height="110dp"
         android:background="@drawable/gradient2"
+        android:layout_margin="2dp"
+        android:elevation="8dp"
         android:padding="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <TextView
-            android:id="@+id/bodyListHead"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="abc"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            app:layout_constraintTop_toTopOf="@id/bgview"
-            app:layout_constraintStart_toStartOf="@id/bgview"
-            app:layout_constraintEnd_toEndOf="@id/bgview"
-            app:layout_constraintBottom_toBottomOf="@id/bgview"/>
+    <TextView
+        android:id="@+id/bodyListHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="abc"
+        android:elevation="9dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintBottom_toBottomOf="@id/bgview"
+        app:layout_constraintEnd_toStartOf="@id/button"
+        app:layout_constraintHorizontal_bias="0.000"
+        app:layout_constraintStart_toStartOf="@id/bgview"
+        app:layout_constraintTop_toTopOf="@id/bgview" />
 
+    <ImageView
+    android:id="@+id/button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:elevation="9dp"
+    android:src="@drawable/ic_baseline_navigate_next_24"
+    app:layout_constraintEnd_toEndOf="@id/bgview"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

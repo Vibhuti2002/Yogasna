@@ -2,35 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".fragments.CategoriesFragment">
+    tools:context=".fragments.WarmUpFragment">
+
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/gradient2"
-        android:text="@string/yogasna"
-        android:fontFamily="sans-serif-medium"
-        android:textColor="@color/white"
-        android:layout_marginBottom="1dp"
-        android:textSize="30sp"
+        android:fontFamily="@font/roboto_slab"
         android:padding="10dp"
+        android:text="@string/yogasna"
+        android:layout_marginBottom="1dp"
         android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
+        app:layout_constraintTop_toTopOf="parent" />
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/categoryRecycler"
+        android:id="@+id/warmUpRecycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title"
         />
 </LinearLayout>

@@ -20,7 +20,7 @@ class CategoriesFragment : Fragment() {
     lateinit var binding: FragmentCategoriesBinding
     private lateinit var newrecyclerview: RecyclerView
     private lateinit var newArraylist: ArrayList<CategoriesDataClass>
-    private var warmUpHeadArray = arrayOf("Head to Toe Warm-up Exercises")
+//    private var warmUpHeadArray = arrayOf("Head to Toe Warm-up Exercises")
     private var stretchArray = arrayOf("Bridge Pose","Cat pose","Child's Pose","Downward Dog","Pigeon pose","Triangle pose","Warrior II")
     private var strengthArray = arrayOf("Three-Legged Dog Pose","Warrior III","Revolved Half Moon Pose","Boat Pose","Bridge Pose","Mountain Pose","Revolved Side Angle Pose")
     var type = 0
@@ -44,19 +44,18 @@ class CategoriesFragment : Fragment() {
     }
 
     private fun getUserData() {
-        if(args.pos == 0) {
-            type=0
-            for (i in warmUpHeadArray.indices) {
-                val categoryData = CategoriesDataClass(warmUpHeadArray[i])
-                newArraylist.add(categoryData)
-            }
-        }
+//        if(args.pos == 0) {
+//            type=0
+//            for (i in warmUpHeadArray.indices) {
+//                val categoryData = CategoriesDataClass(warmUpHeadArray[i])
+//                newArraylist.add(categoryData)
+//            }
+//        }
         if(args.pos == 1) {
             type=1
             for (i in strengthArray.indices) {
                 val categoryData = CategoriesDataClass(strengthArray[i])
                 newArraylist.add(categoryData)
-                Log.d("array", "List${categoryData.toString()}")
             }
         }
         if(args.pos == 2) {
@@ -72,7 +71,6 @@ class CategoriesFragment : Fragment() {
 
     fun onItemClick(position: Int) {
         val pos = position
-        Log.d("TYPE", "type = $type")
         val action = CategoriesFragmentDirections.actionCategoriesFragmentToCategoryDescription(pos, type)
         findNavController().navigate(action)
     }

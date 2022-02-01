@@ -21,6 +21,7 @@ class CategoryDescription : Fragment(), TextToSpeech.OnInitListener {
     private lateinit var desText:String
     private lateinit var storageRef : StorageReference
     private lateinit var tts : TextToSpeech
+    private lateinit var catHeading : String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -49,18 +50,18 @@ class CategoryDescription : Fragment(), TextToSpeech.OnInitListener {
             "Triangle pose engages every part of the body, strengthens the legs and stretches the groin, hamstrings, and hips, and opens the chest and shoulders.It also challenges and improves balance and stability",
             "Warrior II is a standing yoga pose that enhances strength, stability, and concentration. It’s named after the Hindu mythological warrior,Virabhadra, an incarnation of the god Shiva. Virabhadra was a tall, dark, and fierce deity, depicted with a thousand arms, flaming hair andeyes, and wearing a garland of skulls.")
 
-        val catHeading = heading[args.pos]
 
         if(args.type==0){
         desText = warmupDescription[args.pos]
-
         }
         if(args.type==1){
             desText = strengthDescription[args.pos]
+            catHeading = strenghImage[args.pos]
             storageRef = FirebaseStorage.getInstance().reference.child("StrengthPoses/${strenghImage[args.pos]}.PNG")
         }
         if(args.type==2){
             desText = stretchDescription[args.pos]
+            catHeading=stretchImage[args.pos]
              storageRef = FirebaseStorage.getInstance().reference.child("StretchingPoses/${stretchImage[args.pos]}.PNG")
         }
 

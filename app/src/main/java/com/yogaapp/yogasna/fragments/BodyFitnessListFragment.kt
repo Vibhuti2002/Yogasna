@@ -22,7 +22,7 @@ class BodyFitnessListFragment : Fragment() {
     private val absWorkoutArray = arrayOf("Plank", "Mountain Climber", "Reverse Crunch", "Russian twist","Dead Bug", "Leg Raise", "Bird Dog")
     private val shoulderWorkoutArray = arrayOf("Push-ups", "Decline push-ups", "Car driver", "Lateral Raise", "inchworm", "Side plank", "Plank to Down Dog")
     private val armWorkoutArray = arrayOf("Push-ups","Lateral Raise","Triceps", "Superman with arm extension", "Biceps Curl", "Hammer Curl","Diamond Pushups")
-    private val chestWorkoutArray = arrayOf("Chest Workout ex1", "Chest Workout ex2", "Chest Workout ex3", "Chest Workout ex4")
+    private val chestWorkoutArray = arrayOf("Push-ups","Decline push-ups","push-up hold","Mountain Climber","walking plank","Star Jump","Incline push-ups")
 
     private lateinit var newrecyclerview: RecyclerView
     private lateinit var newArraylist: ArrayList<BodyFitnessListDataClass>

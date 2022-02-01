@@ -13,7 +13,6 @@
     <string name="sun_salutation">(Sun salutation)</string>
     <string name="surya_namaskar_or_sun_salutation_is_a_sequence_of_12_powerful_yoga_poses_besides_being_a_great_cardiovascular_workout_surya_namaskar_is_also_known_to_have_an_immensely_positive_impact_on_the_body_and_mind">Surya Namaskar or Sun Salutation is a sequence of 12 powerful yoga poses. Besides being a great cardiovascular workout, Surya Namaskar is also known to have an immensely positive impact on the body and mind.</string>
     <string name="the_surya_namaskar_tones_the_entire_body_helps_with_weight_loss_and_strengthens_muscles_and_joints_practice_this_flow_if_you_want_to_improve_your_complexion_as_it_ensures_a_better_functioning_digestive_system_improve_your_sleep_as_it_helps_combat_insomnia_and_reduces_stress_levels">The Surya Namaskar tones the entire body, helps with weight loss, and strengthens muscles and joints. Practice this flow if you want to improve your complexion as it ensures a better functioning digestive system. Improve your sleep as it helps combat insomnia and reduces stress levels.</string>
-    <string gname="benefits">Benefits</string>
     <string name="sun_salutation_is_a_practice_in_yoga_as_exercise_incorporating_a_flow_sequence_of_some_twelve_gracefully_linked_asanas_the_basic_sequence_involves_moving_from_a_standing_position_into_downward_and_upward_dog_poses_and_then_back_to_the_standing_position_but_many_variations_are_possible_the_set_of_12_asanas_is_dedicated_to_the_hindu_solar_deity_surya">Sun Salutation is a practice in yoga as exercise incorporating a flow sequence of some twelve gracefully linked asanas. The basic sequence involves moving from a standing position into Downward and Upward Dog poses and then back to the standing position, but many variations are possible. The set of 12 asanas is dedicated to the Hindu solar deity Surya.</string>
     <string name="duration">Duration:</string>
     <string name="yogasna">Yogasna</string>
@@ -32,7 +31,6 @@
     <string name="_20_minutes">20 minutes</string>
     <string name="piano_moment">Piano Moment</string>
     <string name="benefits_of_surya_namaskar">Benefits of Surya Namaskar:</string>
-    <string name="categories">Categories</string>
     <string name="exercise_1">Exercise 1</string>
     <string name="speak">Speak</string>
     <string name="body_fitness">Body Fitness</string>
@@ -41,4 +39,5 @@
     <string name="shoulders_workout">Shoulders Workout</string>
     <string name="arms_workout">Arms Workout</string>
     <string name="chest_workout">Chest Workout</string>
+    <string name="categories">Categories</string>
 </resources>

@@ -50,7 +50,6 @@ class HomeAdapter(private var mListener: HomeFragment, private val data: List<ho
             }
         }
     }
-
 }
 
 

@@ -1,46 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.BodyFitnessDescription">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/tvfitnessDesHeading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/heading"
-        android:text="exercise"
-        android:fontFamily="@font/roboto_slab"
+        android:text=""
+        android:fontFamily="sans-serif-medium"
         android:textColor="@color/black"
         android:textSize="27sp"
+        android:padding="10dp"
         android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imageBodyFitnessDes"
+        />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageBodyFitnessDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/tvfitnessDesHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvBodyFitnessDes"
         />
     <TextView
         android:id="@+id/tvBodyFitnessDes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/cardview"
+        android:background="@color/white"
         android:text="@string/hello_blank_fragment"
+        android:fontFamily="sans-serif"
         android:textSize="24sp"
+        android:padding="10dp"
+        android:layout_margin="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvfitnessDesHeading"
+        app:layout_constraintTop_toBottomOf="@id/imageBodyFitnessDes"
         android:textColor="@color/black"/>
+    <ProgressBar
+        android:id="@+id/progressBarT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/imageBodyFitnessDes"
+        app:layout_constraintEnd_toEndOf="@id/imageBodyFitnessDes"
+        app:layout_constraintTop_toTopOf="@id/imageBodyFitnessDes"
+        app:layout_constraintBottom_toBottomOf="@id/imageBodyFitnessDes"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/speak"
-        android:id="@+id/speak"
+        android:background="@drawable/stop"
+        android:id="@+id/stop"
+        android:gravity="bottom"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBodyFitnessDes"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

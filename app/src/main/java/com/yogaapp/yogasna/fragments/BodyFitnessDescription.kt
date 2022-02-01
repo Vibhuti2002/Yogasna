@@ -1,5 +1,6 @@
 package com.yogaapp.yogasna.fragments
 
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import androidx.fragment.app.Fragment
@@ -8,8 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.navArgs
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import com.yogaapp.yogasna.R
 import com.yogaapp.yogasna.databinding.FragmentBodyFitnessDescriptionBinding
+import java.io.File
 import java.util.*
 
 class BodyFitnessDescription : Fragment(), TextToSpeech.OnInitListener {
@@ -19,6 +23,8 @@ class BodyFitnessDescription : Fragment(), TextToSpeech.OnInitListener {
     private lateinit var desText:String
     private lateinit var desHead : String
     private lateinit var tts : TextToSpeech
+    private lateinit var storageRef : StorageReference
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +36,7 @@ class BodyFitnessDescription : Fragment(), TextToSpeech.OnInitListener {
         val absWorkoutArrayHeading = arrayOf("Plank", "Mountain Climber", "Reverse Crunch", "Russian twist","Dead Bug", "Leg Raise", "Bird Dog")
         val shoulderWorkoutArrayHeading = arrayOf("Push-ups", "Decline push-ups", "Car driver", "Lateral Raise", "inchworm", "Side plank", "Plank to Down Dog" )
         val armWorkoutArrayHeading = arrayOf("Push-ups","Lateral Raise","Triceps", "Superman with arm extension", "Biceps Curl", "Hammer Curl","Diamond Pushups")
-        val chestWorkoutArrayHeading = arrayOf("Push-ups","decline push-up","push-up hold","Mountain Climber","walking plank","Star Jump","Incline push-ups")
+        val chestWorkoutArrayHeading = arrayOf("Push-ups","Decline push-ups","push-up hold","Mountain Climber","walking plank","Star Jump","Incline push-ups")
 
         val absWorkoutArray = arrayOf("Start in plank position. Carefully shift your weight to your right forearm (or palm). Extend your left arm straight out in front of you. Hold for three seconds while keeping your core tight. Slowly bring your arm back to starting position. Switch arms and repeat. Do two to three sets of 10 reps.",
              "Pull your right knee into your chest as far as you can. Switch legs, pulling one knee out and bringing the other knee in. Keep your hips down and run your knees in and out as far and as fast as you can. Alternate inhaling and exhaling with each leg change.",
@@ -41,7 +47,7 @@ class BodyFitnessDescription : Fragment(), TextToSpeech.OnInitListener {
              "Start on your hands and knees with the hands under the shoulders and the knees under the hips. Extend one leg and the opposite arm at the same time.Pause for 3 to 5 seconds, return to the starting position, and switch sides. Continue alternating sides until set is complete.")
          val shoulderWorkoutArray = arrayOf("Lie face down, with your palms on the floor, next to your shoulders. You can also use a bench. Keeping your back straight, push your hands into the ground so that your torso lifts upwards off the floor. Make sure your hands, wrists, and elbows stay in a straight line throughout the movement. At the top, hold this position for a second and then lower yourself back down to your starting position. Hold this for a second and then repeat the above steps. Keep your core locked as tight as possible throughout. Aim to complete 10 reps.",
              "Get into a push-up position and raise your feet onto a table or chair.  Keep your body and arms straight, palms on the floor, just wider than the shoulders. 3. Slowly lower yourself down to the floor whilst keeping your feet elevated. Hold at the bottom for a second, then push back up. Repeat the sequence. Start with 3 sets of as many reps as possible. Try build up the number of repetitions each week.",
-             " Stand with feet shoulder-width apart. Hold a circular heavy object with both hands and extend your arms straight in front of you. As you would turn a steering wheel, turn the weight to the left as far as you can, and then to the right. Make sure to keep your shoulders down. Continue for 1 minute.",
+             "Stand with feet shoulder-width apart. Hold a circular heavy object with both hands and extend your arms straight in front of you. As you would turn a steering wheel, turn the weight to the left as far as you can, and then to the right. Make sure to keep your shoulders down. Continue for 1 minute.",
              "Stand with feet shoulder-width apart. Hold a heavy object ( eg - dumbbell) in each hand, with arms by your sides and palms facing in (or hold a band between your hands). Lift your arms out to the sides (forming a T shape) until they’re parallel with the floor.Hold for a second or so, then lower back to the starting position for a count of three. Do 10 reps per set.",
              "Stand with feet hip-width apart and arms by your sides. Keeping core engaged and back straight, hinge at your hips and put your palms on the floor (bend knees if needed).Slowly and carefully walk hands forward into a high plank position, with wrists under shoulders and body in a straight line.Hold for a moment, then walk hands back to feet to complete 1 rep. Do 10 reps per set.",
              "Lie on your right side, with legs stacked. Prop yourself up on your elbow or hand, keeping feet and legs stacked.Hold for up to 1 minute, or as long as you can hold good form. Repeat on the other side.",
@@ -63,22 +69,40 @@ class BodyFitnessDescription : Fragment(), TextToSpeech.OnInitListener {
         if (args.headPos==0){
             desText = absWorkoutArray[args.pos]
             desHead = absWorkoutArrayHeading[args.pos]
+            storageRef = FirebaseStorage.getInstance().reference.child("bodyfitness/abs/${absWorkoutArrayHeading[args.pos]}.PNG")
         }
         if (args.headPos==1){
             desText = shoulderWorkoutArray[args.pos]
             desHead = shoulderWorkoutArrayHeading[args.pos]
+            storageRef = FirebaseStorage.getInstance().reference.child("bodyfitness/shoulders/${shoulderWorkoutArrayHeading[args.pos]}.jpg")
         }
         if (args.headPos==2){
             desText = armWorkoutArray[args.pos]
             desHead = armWorkoutArrayHeading[args.pos]
+            storageRef = FirebaseStorage.getInstance().reference.child("bodyfitness/arms/${armWorkoutArrayHeading[args.pos]}.jpg")
         }
         if (args.headPos==3){
             desText = chestWorkoutArray[args.pos]
             desHead = chestWorkoutArrayHeading[args.pos]
+            storageRef = FirebaseStorage.getInstance().reference.child("bodyfitness/chest/${chestWorkoutArrayHeading[args.pos]}.jpg")
+        }
+        val localfile = File.createTempFile("Tempimage", "jpg")
+        storageRef.getFile(localfile).addOnSuccessListener {
+            if (binding.progressBarT.visibility == View.VISIBLE) {
+                binding.progressBarT.visibility = View.GONE
+            }
+            val bitmap = BitmapFactory.decodeFile(localfile.absolutePath)
+            binding.imageBodyFitnessDes.setImageBitmap(bitmap)
+            speak()
+        }.addOnFailureListener {
+            Toast.makeText(activity, "Failed to load image", Toast.LENGTH_SHORT).show()
+            if (binding.progressBarT.visibility == View.VISIBLE) {
+                binding.progressBarT.visibility = View.GONE
+            }
         }
         binding.tvBodyFitnessDes.text = desText
         binding.tvfitnessDesHeading.text = desHead
-        binding.speak.setOnClickListener { speak() }
+        binding.stop.setOnClickListener { stop() }
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -111,6 +135,4 @@ class BodyFitnessDescription : Fragment(), TextToSpeech.OnInitListener {
     fun stop(){
         tts.stop()
     }
-
-
 }

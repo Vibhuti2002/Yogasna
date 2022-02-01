@@ -24,12 +24,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:fontFamily="@font/roboto_slab"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/step_01"
         android:textColor="@color/white"
         android:textSize="27sp"
         app:layout_constraintBottom_toTopOf="@id/duration"
-
         app:layout_constraintEnd_toEndOf="@id/bgview"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/bgview"
@@ -40,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:fontFamily="@font/roboto_slab"
+        android:fontFamily="sans-serif"
         android:text=" 20 minutes"
         android:textColor="@color/white"
         android:textSize="24dp"
@@ -55,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:fontFamily="@font/roboto_slab"
+        android:fontFamily="sans-serif"
         android:text="@string/duration"
         android:textColor="@color/white"
         android:textSize="24dp"
@@ -70,7 +69,6 @@
         app:layout_constraintEnd_toEndOf="@id/bgview"
         app:layout_constraintTop_toTopOf="@id/bgview"
         app:layout_constraintBottom_toBottomOf="@id/bgview"
-
         android:src="@drawable/ic_baseline_navigate_next_24"
         tools:layout_editor_absoluteX="304dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

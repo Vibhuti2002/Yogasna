@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_homeFragment_to_categoriesFragment"
             app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_warmUpFragment"
+            app:destination="@id/warmUpFragment" />
 
 
     </fragment>
@@ -135,6 +138,11 @@
             android:name="pos"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/warmUpFragment"
+        android:name="com.yogaapp.yogasna.fragments.WarmUpFragment"
+        android:label="fragment_warm_up"
+        tools:layout="@layout/fragment_warm_up" />
 
 
 </navigation>

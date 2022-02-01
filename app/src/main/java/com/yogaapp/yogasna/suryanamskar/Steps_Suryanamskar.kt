@@ -46,18 +46,18 @@ class Steps_Suryanamskar : Fragment(), Surya_Adapter.onItemClickListener {
         )
 
         suryadurationArray = arrayOf(
-            "1 minutes",
-            "2 minutes",
-            "3 minutes",
-            "4 minutes",
-            "5 minutes",
-            "6 minutes",
-            "7 minutes",
-            "8 minutes",
-            "9 minutes",
-            "10 minutes",
-            "11 minutes",
-            "12 minutes"
+            "30 Seconds",
+            "30 Seconds",
+            "30 Seconds",
+            "30 Seconds",
+            "30 Seconds",
+            "30 Seconds",
+            "30 Seconds",
+            "30 Seconds",
+            "30 Seconds",
+            "30 Seconds",
+            "30 Seconds",
+            "30 Seconds"
         )
 
         val view = inflater.inflate(R.layout.fragment_steps__suryanamskar, container, false)

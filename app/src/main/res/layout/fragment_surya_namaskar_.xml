@@ -13,8 +13,9 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="53dp"
+        android:layout_marginHorizontal="1dp"
         android:background="@drawable/heading"
-        android:fontFamily="@font/roboto_slab"
+        android:fontFamily="sans-serif-medium"
         android:text="Surya Namaskar"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -26,14 +27,13 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
-
         android:id="@+id/steps"
-        android:layout_width="388dp"
+        android:layout_width="match_parent"
         android:layout_height="78dp"
         android:background="@drawable/buttons"
-        android:fontFamily="@font/roboto_slab"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginHorizontal="15dp"
         android:padding="10dp"
-
         android:text="@string/step_by_step_poses"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -48,12 +48,12 @@
     <androidx.appcompat.widget.AppCompatButton
 
         android:id="@+id/benefits"
-        android:layout_width="388dp"
+        android:layout_width="match_parent"
         android:layout_height="78dp"
         android:layout_marginTop="36dp"
+        android:layout_marginHorizontal="15dp"
         android:background="@drawable/buttons"
-        android:fontFamily="@font/roboto_slab"
-
+        android:fontFamily="sans-serif-medium"
         android:padding="10dp"
         android:text="@string/benefits"
         android:textColor="@color/black"
@@ -68,13 +68,11 @@
     <TextView
 
         android:id="@+id/description"
-        android:layout_width="389dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="36dp"
-
+        android:layout_margin="15dp"
         android:background="@drawable/gradient5"
-        android:fontFamily="@font/roboto_slab"
+        android:fontFamily="sans-serif"
         android:text="@string/sun_salutation_is_a_practice_in_yoga_as_exercise_incorporating_a_flow_sequence_of_some_twelve_gracefully_linked_asanas_the_basic_sequence_involves_moving_from_a_standing_position_into_downward_and_upward_dog_poses_and_then_back_to_the_standing_position_but_many_variations_are_possible_the_set_of_12_asanas_is_dedicated_to_the_hindu_solar_deity_surya"
         android:textAlignment="center"
         android:textColor="@color/black"
