@@ -38,6 +38,12 @@ Yoga is based on ancient Indian wisdom and it not only keeps our body fit but ca
  
 4) **Surya Namaskar**
 - Step by step
+
+### Used -
+- Text To Sppech
+- Firebase
+- Navigation Component
+- Sketchbook to design yoga postures
  
 ## Built with 
 ![](https://img.shields.io/badge/Code-Android-informational?style=flat&logo=Android&color=CC0000)
