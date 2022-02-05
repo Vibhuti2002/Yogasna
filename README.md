@@ -34,7 +34,7 @@ Yoga is based on ancient Indian wisdom and it not only keeps our body fit but ca
 - Abs, Shoulder, Arms and Chest workout.
  
 3) **Relax**
-- Relax Musics
+- Relaxing Musics
  
 4) **Surya Namaskar**
 - Step by step
